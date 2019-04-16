@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<div class="topnav">
+    <a class="active"  href="/Key_to_Happiness/">Home</a>
+    <a href="/Key_to_Happiness/map.html">Map Explorer</a>
+    <a href="/Key_to_Happiness/box.html">Regional Variance</a>
+    <a href="/Key_to_Happiness/bubblefeature.html">Happiness Indicators</a> 
+    <a href="/Key_to_Happiness/barchart.html">Happiness Indicators by Region</a>
+    <a href="/Key_to_Happiness/featuretrend.html">Feature Trend</a>
+    <a href="/Key_to_Happiness/interaction.html">Happiness Interactions</a>
+  <a href="/Key_to_Happiness/comparison.html">Countrywise Comparisons</a>
+</div>
+<header>
+    <h1>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Explore Hapiness in different ways  </h1>
+
+</header></div>
+<style>
+
+*set the axis line color, dot stroke, font size, and font position*/
+body {
+  font: 15px sans-serif;
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15.5px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.name{
+  position: relative;
+  top: 90px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.title {
+  position: relative;
+  text-align: left;
+  font-size: 25px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000000; ;
+}
+
+#filter {
+  position: absolute;
+  top: 610px;
+  bottom: 125px;
+  left: 300px;
+  right: 0px;
+}
+
+#mark {
+  position: absolute;
+  top: 610px;
+  bottom: 125px;
+  left: 500px;
+  right: 0px;
+}
+
+#xAXs {
+  position: absolute;
+top: 630px;
+bottom: 100px;
+left: 670px;
+right: 0px;
+}
+
+#yAXs {
+position: absolute;
+top: 630px;
+bottom: 100px;
+left: 900px;
+right: 0px;
+
+}
+
+#label {
+position: absolute;
+top: 610px;
+bottom: 100px;
+left: 900px;
+right: 0px;
+}
+
+#label2 {
+position: absolute;
+top: 610px;
+bottom: 100px;
+left: 670px;
+right: 0px;
+}
+#tan {
+position: absolute;
+top: 750px;
+bottom: 125px;
+left: 200px;
+right: 0px;
+font-size: 13px;
+}
+
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+img {
+ width: 100%;
+}
+
+</style>
+
+<body>
+
+
+        <script src="//d3js.org/d3.v3.min.js"></script>
+        <script src="//labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+        <font size = "4"> 
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  What is the key to Happiness? How does it differ around the world? Find out by exploring: 
+ <br> 
+ <br>
+<b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. World Map Explorer: </b> Gain a high-level overview of world happiness by country.  <br> 
+
+<b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. Regional Variance: </b>Analyze average happiness by region and the variation of happiness across a given region.  <br> 
+
+<b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. Feature Importance on Happiness Score: </b>Understand feature importance based on correlations between features and happiness score.  <br> 
+
+<b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4. Feature Importance by Category: </b> Identify feature by categories: Economy, Social Development, Safety & Health, Resources and Freedom.<br> 
+
+<b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5. Feature Importance by Region: </b> Explore features grouped by the region and see, how a feature affects that region’s happiness.  <br> 
+
+<b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6. Feature Trend: </b>Visualize trends (positive, negative, linear, nonlinear) between a feature and happiness.  <br> 
+
+<b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7. Happiness and feature interaction: </b>Understand interactions between two features with happiness. <br> 
+
+<b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8. Country Comparisons: </b> Search for various countries and see how they rank on each factor. Compare two countries against each other.<br> 
+
+<h1>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creators and Happiness Advocates  </h1> <br> 
+
+        </font>
+ <font size = "5"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.mccormick.northwestern.edu/analytics/our-students-alumni/meet-students/student-profiles/class-of-2019/tandon-tanya.html">Tanya Tandon </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          <a href="https://www.mccormick.northwestern.edu/analytics/our-students-alumni/meet-students/student-profiles/class-of-2019/kaduwela-naomi.html">     Naomi Kaduwela </a>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <a href="https://www.mccormick.northwestern.edu/analytics/our-students-alumni/meet-students/student-profiles/class-of-2019/verma-anjali.html"> Anjali Verma  </a>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             <a href = https://www.mccormick.northwestern.edu/analytics/our-students-alumni/meet-students/student-profiles/class-of-2019/qian-kejin.html> Kejin Qian  </a>         
+ </font> 
+
+ <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <IMG STYLE="position:relative;  width: 130px; height: 130px "  SRC="tanyatandon.jpg">  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <IMG STYLE="position:relative;  width: 130px ; height: 130px "  SRC="naomik.jpg">   
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <IMG STYLE="position:relative;  width: 130px ; height: 130px "  SRC="anjaliv.jpg">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <IMG STYLE="position:relative;  width: 130px ; height: 130px "  SRC="karenk.jpg">
+
+
+</body>
